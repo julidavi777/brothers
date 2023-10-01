@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\PedidoController;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +25,10 @@ Route::resource('/empleados', EmpleadoController::class);
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/gerente', function () {
+    return view('roles.gerente');
+}); 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

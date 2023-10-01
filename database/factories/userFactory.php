@@ -37,27 +37,27 @@ class userFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
-    public function administrator(): static
-    {
-        return $this->state(fn (array $attributes) => [
-           'role' =>  User::ROLE_ADMINISTRATIVO,
-        ]);
-    }
+    // public function administrator(): static
+    // {
+    //     return $this->state(fn (array $attributes) => [
+    //        'role' =>  User::ROLE_ADMINISTRATIVO
+    //     ]);
+    // }
         
-    public function asesor(): static
-    {
-        return $this->state(fn (array $attributes) => [
-           'role' =>  User::ROLE_ASESOR,
-        ]);
-    }
-    public function entregador(): static{
-        return $this->state(fn(array $attributes)=>[
-            'role' => User::ROLE_ENTREGADOR
-        ]); 
-    }
-    public function gerente(): static{
-        return $this->state(fn(array $attributes)=>[
-            'role' => User::ROLE_GERENTE
-        ]);
-    }
+    // public function asesor(): static
+    // {
+    //     return $this->state(fn (array $attributes) => [
+    //        'role' =>  User::ROLE_ASESOR
+    //     ]);
+    // }
+    // public function entregador(): static{
+    //     return $this->state(fn(array $attributes)=>[
+    //         'role' => User::ROLE_ENTREGADOR
+    //     ]); 
+    // }
+    // public function gerente(): static{
+    //     return $this->state(fn(array $attributes)=>[
+    //         'role' => User::ROLE_GERENTE
+    //     ]);
+    // }
 }
