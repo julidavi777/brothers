@@ -1,10 +1,9 @@
-@extends('layouts.app')
+   <x-layouts.main-layout>
 
-@section('content')
-    <section class="banner_main">
-        <div class="container bg-dark p-3 rounded text-white">
-            <h1 class="text-white text-center">Crear empleado</h1>
-            <form method="POST" action="{{ route('nombre_de_la_ruta_para_crear_empleado') }}">
+       <section class="banner_main">
+           <div class="container bg- p-3 rounded text-white">
+               <h1 class="text-white text-center">Crear empleado</h1>
+            <form method="POST" action="{{url('/empleados') }}">
                 @csrf
                 <div class="row">
                     <div class="form-group col-6">
@@ -71,6 +70,6 @@
             </form>
         </div>
     </section>
-
+    
     <script src="{{ asset('js/departamentos.js') }}"></script>
-@endsection
+</x-layouts.main-layout>

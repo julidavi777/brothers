@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers;
 use App\Models\Empleado;
+use App\Models\User; 
 
 use Illuminate\Http\Request;
 
 class EmpleadoController extends Controller
 {
     public function index(){
-        $empleado = Empleado::all();
-        return view('empleados.index', compact('empleado'));
+        $empleados = Empleado::all();
+        return view('empleados.index', compact('empleados'));
 
     }
-    public function crearEmpleado()
+    public function create()
     {
-        return view('crear');
+        return view('empleados.create');
     }
-    public function guardarEmpleado(Request $request)
+    public function store(Request $request)
     {
         // Validación de datos del formulario (puedes personalizar esto según tus necesidades)
         $request->validate([
@@ -35,6 +36,7 @@ class EmpleadoController extends Controller
 
         // Crea un nuevo objeto Empleado y asigna los valores del formulario
         $empleado = new Empleado();
+        $user = new User();
         $empleado->nombre = $request->input('nombre');
         $empleado->apellidos = $request->input('apellidos');
         $empleado->cedula = $request->input('cedula');
@@ -44,13 +46,14 @@ class EmpleadoController extends Controller
         $empleado->barrio = $request->input('barrio');
         $empleado->tipo_empleado = $request->input('tipo_empleado');
         $empleado->salario = $request->input('salario');
-        $empleado->usuario = $request->input('usuario');
-        $empleado->contrasena = bcrypt($request->input('contrasena')); // Hashea la contraseña
+        $user->usuario = $request->input('usuario');
+        $user->contrasena = bcrypt($request->input('contrasena')); // Hashea la contraseña
 
         // Guarda el empleado en la base de datos
         $empleado->save();
+        $user->save(); 
 
         // Redirecciona a alguna vista o acción de confirmación
-        return redirect()->route('nombre_de_la_ruta_para_vista_de_confirmacion');
+        return redirect('empleads')->with('');
     }
 }
