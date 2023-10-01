@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmpleadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/pedidos', 'PedidoController@index')->name('pedidos.index');
+
+Route::get('/crear-empleado', 'EmpleadoController@crearEmpleado')->name('crear_empleado');
+
+Route::get('/empleados', function () {
+    return view('empleados.index');
+});
 
 Route::get('/', function () {
     return view('welcome');

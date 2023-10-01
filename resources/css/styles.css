@@ -1,0 +1,18 @@
+    /* Estilo personalizado para el footer */
+    footer {
+        background-color: #007BFF;
+        color: white;
+        padding: 20px 0;
+    }
+
+    /* Estilo para los enlaces en el footer */
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Estilo para los iconos de redes sociales */
+    footer .social-icons i {
+        font-size: 24px;
+        margin-right: 10px;
+    }
