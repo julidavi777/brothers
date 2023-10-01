@@ -26,7 +26,7 @@
                         <ul class="navbar-nav">
                             <!-- barra de navegacion para el Usuario Administrativo -->
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.blade.php">Pedidos</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('pedidos.index')}}">Pedidos</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#">Empleados</a>
@@ -94,3 +94,4 @@
     </body>
     </html>
 </div>
+

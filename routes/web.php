@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\PedidoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,11 @@ use App\Http\Controllers\EmpleadoController;
 |
 */
 
-Route::get('/pedidos', 'PedidoController@index')->name('pedidos.index');
 
-Route::get('/crear-empleado', 'EmpleadoController@crearEmpleado')->name('crear_empleado');
+
+Route::get('/pedidos', [PedidoController::class, 'index'])->name ('pedidos.index');
+Route::get('/empleado', [EmpleadoControllerController::class, 'index'])->name ('empleado.index');
+
 
 Route::get('/empleados', function () {
     return view('empleados.index');
