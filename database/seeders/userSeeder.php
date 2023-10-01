@@ -17,7 +17,6 @@ class userSeeder extends Seeder
             'email' => 'pedidos@entregas.com',
             'password' => bcrypt('12345678'),
             'email_verified_at' => now(),
-            'role'=>'1'
-        ]);
+        ])->assignRole('administrativo'); ;
     }
 }
