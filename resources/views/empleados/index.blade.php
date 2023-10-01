@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layouts.main-layout>
     <div class="container">
         <h1>Listado de Empleados</h1>
 
@@ -19,22 +17,8 @@
                     <th>Salario</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach($empleados as $empleado)
-                    <tr>
-                        <td>{{ $empleado->id }}</td>
-                        <td>{{ $empleado->nombre }}</td>
-                        <td>{{ $empleado->apellidos }}</td>
-                        <td>{{ $empleado->cedula }}</td>
-                        <td>{{ $empleado->direccion }}</td>
-                        <td>{{ $empleado->departamento }}</td>
-                        <td>{{ $empleado->municipio }}</td>
-                        <td>{{ $empleado->barrio }}</td>
-                        <td>{{ $empleado->tipoEmpleado }}</td>
-                        <td>{{ $empleado->salario }}</td>
-                    </tr>
-                @endforeach
-            </tbody>
+            
         </table>
     </div>
-@endsection
+</x-layouts.main-layout>
+

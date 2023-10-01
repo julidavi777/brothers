@@ -18,7 +18,7 @@ use App\Http\Controllers\PedidoController;
 
 
 Route::get('/pedidos', [PedidoController::class, 'index'])->name ('pedidos.index');
-Route::get('/empleado', [EmpleadoControllerController::class, 'index'])->name ('empleado.index');
+Route::get('/empleado', [EmpleadoController::class, 'index'])->name ('empleado.index');
 
 
 Route::get('/empleados', function () {

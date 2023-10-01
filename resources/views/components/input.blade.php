@@ -1,3 +1,5 @@
-<div>
-    <input type="{{ $tipo }}" name="{{ $name }}" id="{{ $id }}">
+<div class="form-group col-6" >
+    <label for="">{{$label}}</label>
+    <input class="form-control" {{ $attributes }}>
+
 </div>

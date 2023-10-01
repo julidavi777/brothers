@@ -3,7 +3,6 @@
 <h1>Lista de Pedidos</h1>
 
 <div class="container">
-        <h1 class="mt-4">Lista de Pedidos</h1>
 
         <!-- Formulario de filtro con estilos de Bootstrap -->
         <form method="GET" class="mb-4">
@@ -65,4 +64,7 @@
             @endforeach
         </ul>
     </div>
+    <x-input label="mamahuevo" name="mamahuevo" id="perra" type="text">
+        
+    </x-input>
 </x-layouts.main-layout>
