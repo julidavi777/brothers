@@ -1,4 +1,5 @@
 <div class="form-group selectChosen col-md-6 my-2">
+
     <label for="departamento">Departamento</label>
     <select name="departamento" id="selectDepartment" class="form-control select2">
         <option value="">Selecciona un departamento</option>
