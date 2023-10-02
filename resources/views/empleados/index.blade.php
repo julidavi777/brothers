@@ -15,10 +15,17 @@
                     <th>Barrio</th>
                     <th>Tipo de Empleado</th>
                     <th>Salario</th>
+                    <th><a href="{{url('empleados/edit')}}" class="btn btn-primary mt-3">Editar</a></th>
                 </tr>
             </thead>
             
         </table>
+
+    
+    <a href="{{url('empleados/create')}}" class="btn btn-primary mt-3">Crear Empleado</a>
+    
+
+
     </div>
 </x-layouts.main-layout>
 

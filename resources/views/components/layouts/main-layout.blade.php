@@ -29,7 +29,7 @@
                             <a class="nav-link active" aria-current="page" href="{{route('pedidos.index')}}">Pedidos</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">Empleados</a>
+                            <a class="nav-link" href="{{url('/empleados')}}">Empleados</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#">Ventas</a>
