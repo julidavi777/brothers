@@ -47,13 +47,13 @@ class EmpleadoController extends Controller
         $empleado->tipo_empleado = $request->input('tipo_empleado');
         $empleado->salario = $request->input('salario');
         $user->usuario = $request->input('usuario');
-        $user->contrasena = bcrypt($request->input('contrasena')); // Hashea la contraseña
+        $user->contrasena = bcrypt($request->input('contrasena')); // encripta la contraseña
 
         // Guarda el empleado en la base de datos
         $empleado->save();
         $user->save(); 
 
         // Redirecciona a alguna vista o acción de confirmación
-        return redirect('empleads')->with('');
+        return redirect('/empleados')->with('Empleado creado correctamente');
     }
 }
