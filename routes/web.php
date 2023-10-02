@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\PedidoController;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +14,6 @@ use App\Http\Controllers\PedidoController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
 
 Route::get('/pedidos', [PedidoController::class, 'index'])->name ('pedidos.index'); 
 // Route::get('/empleado', [EmpleadoControllerController::class, 'index'])->name ('empleado.index'); 
@@ -33,4 +31,5 @@ Route::get('/departamentos',[DepartamentoController::class, 'index']);
 Route::get('/departamentos/{id}',[DepartamentoController::class, 'show']); 
 Auth::routes(); 
  
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

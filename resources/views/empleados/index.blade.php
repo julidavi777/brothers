@@ -28,4 +28,3 @@
 
     </div>
 </x-layouts.main-layout>
-

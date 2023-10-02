@@ -4,8 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Usuario; 
-use Illuminate\Support\Facades\DB; 
+use App\Models\Usuario;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 class UsuarioSeeder extends Seeder
 {
@@ -15,9 +15,9 @@ class UsuarioSeeder extends Seeder
     public function run(): void
     {
         Usuario::create([
-            'name' => 'administrador',
-            'password' => '12345678',
+            'nombre' => 'administrador',
+            'contraseña' => '12345678',
             'email' => 'pedidos@entregas.com'
-        ]);
+        ])->assignRole('administrativo'); 
     }
 }
