@@ -16,22 +16,19 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-
-
-Route::get('/pedidos', [PedidoController::class, 'index'])->name ('pedidos.index');
-// Route::get('/empleado', [EmpleadoControllerController::class, 'index'])->name ('empleado.index');
-
-Route::resource('/empleados', EmpleadoController::class); 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/gerente', function () {
-    return view('roles.entregador');
+Route::get('/pedidos', [PedidoController::class, 'index'])->name ('pedidos.index'); 
+// Route::get('/empleado', [EmpleadoControllerController::class, 'index'])->name ('empleado.index'); 
+ 
+Route::resource('/empleados', EmpleadoController::class);  
+ 
+Route::get('/', function () { 
+    return view('welcome'); 
 }); 
-Route::get('/departamentos',[DepartamentoController::class, 'index']);
-Route::get('/departamentos/{id}',[DepartamentoController::class, 'show']);
-Auth::routes();
+ 
+Route::get('/departamentos',[DepartamentoController::class, 'index']); 
+Route::get('/departamentos/{id}',[DepartamentoController::class, 'show']); 
+Auth::routes(); 
+ 
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
