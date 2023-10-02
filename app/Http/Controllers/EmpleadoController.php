@@ -54,6 +54,6 @@ class EmpleadoController extends Controller
         $user->save(); 
 
         // Redirecciona a alguna vista o acción de confirmación
-        return redirect('empleads')->with('');
+        return redirect('/empleados')->with('');
     }
 }

@@ -18,6 +18,6 @@ class UsuarioSeeder extends Seeder
             'nombre' => 'administrador',
             'contraseña' => '12345678',
             'email' => 'pedidos@entregas.com'
-        ])->assignRole('administrativo'); 
+        ]);
     }
 }

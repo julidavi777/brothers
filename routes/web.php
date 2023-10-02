@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DepartamentoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\PedidoController;
@@ -27,8 +28,10 @@ Route::get('/', function () {
 });
 
 Route::get('/gerente', function () {
-    return view('roles.gerente');
+    return view('roles.entregador');
 }); 
+Route::get('/departamentos',[DepartamentoController::class, 'index']);
+Route::get('/departamentos/{id}',[DepartamentoController::class, 'show']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
