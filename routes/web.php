@@ -18,13 +18,19 @@ use App\Http\Controllers\PedidoController;
 
 
 Route::get('/pedidos', [PedidoController::class, 'index'])->name ('pedidos.index');
-Route::get('/empleado', [EmpleadoController::class, 'index'])->name ('empleado.index');
+// Route::get('/empleado', [EmpleadoControllerController::class, 'index'])->name ('empleado.index');
 
-
-Route::get('/empleados', function () {
-    return view('empleados.index');
-});
+Route::resource('/empleados', EmpleadoController::class); 
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/gerente', function () {
+    return view('roles.entregador');
+}); 
+Route::get('/departamentos',[DepartamentoController::class, 'index']);
+Route::get('/departamentos/{id}',[DepartamentoController::class, 'show']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
